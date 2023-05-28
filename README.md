@@ -58,3 +58,29 @@ forge init refresh-foundry
 
 The foundry project is not designed for monorepo, you may need to move `.github`
 to root directory of your monorepo.
+
+## VSCode setup
+
+Add the following VSCode setting:
+
+```json
+{
+  "solidity.compileUsingRemoteVersion": "v0.8.20+commit.a1b79de6",
+  "solidity.packageDefaultDependenciesContractsDirectory": "src",
+  "solidity.packageDefaultDependenciesDirectory": "lib",
+  "editor.formatOnSave": true,
+  "[solidity]": {
+    "editor.defaultFormatter": "JuanBlanco.solidity"
+  },
+  "solidity.formatter": "forge"
+}
+```
+
+To customize the formatter, you can add the following config in `foundry.toml`:
+
+```toml
+[fmt]
+line_length = 80
+tab_width = 2
+bracket_spacing = true
+```
